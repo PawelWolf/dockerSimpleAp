@@ -19,17 +19,3 @@ stages:
         tags: |
           $(Build.BuildId)
           latest
-
-  - job: BuildDocker_SalesBookWEB
-    displayName: Build Docker Image for SalesBook.WEB app
-    
-    steps:
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'meritomf01SvcConnection'
-        repository: 'SalesBook.WEB'
-        command: 'buildAndPush'
-        Dockerfile: '**/SalesBook.WEB/Dockerfile'
-        tags: |
-          $(Build.BuildId)
-          latest
