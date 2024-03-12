@@ -67,8 +67,8 @@ stages:
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
-          az network traffic-manager endpoint update --resource-group Images_RG --profile-name TMakspwolf --name ab1 --weight 100 --type azureEndpoints
-          az network traffic-manager endpoint update --resource-group Images_RG --profile-name TMakspwolf --name ab2 --weight 50 --type azureEndpoints
+          az network traffic-manager endpoint update --resource-group Images_RG --profile-name TMakspwolf --name nginx --weight 100 --type azureEndpoints
+          az network traffic-manager endpoint update --resource-group Images_RG --profile-name TMakspwolf --name apache --weight 50 --type azureEndpoints
         useGlobalConfig: true    
   - job: waitForNext
     displayName: waitForNext
